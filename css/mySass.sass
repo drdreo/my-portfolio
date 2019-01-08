@@ -1,0 +1,644 @@
+@import "fonts.css"
+
+$primary-color: #DAA520
+$secondary-color: #ffc523
+$heading-color: #ffc523
+
+$bg-primary: #f0f0f0
+$bg-secondary: #212121
+$text-secondary: $bg-primary
+$text-primary: $bg-secondary
+$bg-color: #FAFAFA
+$font-paragraph: "Hind"
+$font-heading: "Karla"
+$font-link: $font-paragraph
+
+$break-small: 420px
+$break-medium: 750px
+$break-large: 1024px
+$break-retina: 1280px
+$break-hd: 1900px
+
+@mixin respond-to($media)
+  @if $media == handhelds
+    @media only screen and (max-width: $break-small)
+      @content
+
+  @else if $media == medium-screens
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1)
+      @content
+
+  @else if $media == wide-screens
+    @media only screen and (min-width: $break-large)
+      @content
+  @else if $media == full-hd
+    @media only screen and (min-width: $break-hd)
+      @content
+
+  @else if $media == medium-up
+    @media only screen and (min-width: $break-medium + 1)
+      @content
+
+  @else if $media == medium-down
+    @media only screen and (max-width: $break-medium - 1)
+      @content
+  @else if $media == retina-down
+    @media only screen and (max-width: $break-retina + 1)
+      @content
+
+//Mobile Styles
+
+//Element Styles
+body
+  position: relative
+  max-width: 100%
+  overflow-x: hidden
+  background-color: $bg-color
+
+html, body
+  max-width: 100%
+  overflow-x: hidden
+
+  font-family: $font-paragraph
+  font-weight: 300
+
+  a
+    font-family: $font-link
+    -o-transition: color 0.5s linear
+    -ms-transition: color 0.5s linear
+    -moz-transition: color 0.5s linear
+    -webkit-transition: color 0.5s linear
+    transition: color 0.5s ease
+    &:hover
+      color: $secondary-color
+      text-decoration: none
+      cursor: pointer
+    &:focus
+      text-decoration: none
+      color: $secondary-color
+
+h5, h6
+  color: $heading-color
+
+h2, h3, h4
+  font-weight: 700
+  text-transform: uppercase
+  font-family: $font-heading
+
+h2
+  font-size: 24px
+
+h3
+  font-size: 20px
+
+h4
+  font-size: 14px
+
+section
+  height: 100vh
+  overflow: hidden
+
+footer
+  height: 100px
+  width: 100%
+  padding-left: 10%
+  vertical-align: middle
+  z-index: 1000
+
+  .container
+    height: 75px
+    line-height: 80px
+
+  @include respond-to(medium-down)
+    padding-left: 0
+    margin: 0
+    height: initial
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+  outline: none
+
+img
+  transition: all 0.3s ease-in-out
+
+#content
+
+  @include respond-to(medium-up)
+    padding-left: 115px
+
+.container
+  height: 100%
+  width: 100%
+
+.no-padding
+  padding: 0
+
+//Navbar
+.site-navbar
+  left: 0
+  width: 100px
+  background-color: #212121
+  color: #fff
+  z-index: 1001
+  box-shadow: -5px 0px 15px rgba(255, 255, 255, 0.8)
+  a
+    font-size: 0.8em
+    margin-top: 5px
+    color: inherit
+
+  @include respond-to(medium-down)
+    display: none
+
+.nav-link.active, .nav-link.activeSection
+  color: $primary-color
+
+.navbar-items
+  margin-top: 100vh
+  -o-transition: margin-top 1.5s ease
+  -ms-transition: margin-top 1.5s ease
+  -moz-transition: margin-top 1.5s ease
+  -webkit-transition: margin-top 1.5s ease
+  transition: margin-top 1.5s ease
+
+  li.active
+    color: $primary-color
+
+.nav-link
+  text-transform: uppercase
+
+.link
+  a
+    text-decoration: underline
+
+.site-navbar
+  height: 100%
+  padding: 20px 0
+  position: fixed
+  text-align: center
+  vertical-align: middle
+
+.primary-heading
+  color: #7e7e7e
+  position: absolute
+  top: 15%
+  font-size: 3em
+  text-align: center
+  vertical-align: middle
+  word-spacing: 100000px
+
+  img
+    height: 500px
+    position: relative
+    left: 15px
+    opacity: 0.9
+
+  @include respond-to(medium-down)
+    top: 1em
+
+//Backgrounds
+.bg-primary
+  background-color: #f0f0f0 !important
+  color: #323232
+
+.bg-secondary
+  background-color: $bg-secondary !important
+  color: $text-secondary
+  hr
+    border-top: 1px solid rgba(255, 255, 255, .1)
+
+.bg-darken
+  background-color: #454545 !important
+  color: $text-secondary
+
+//content formatting
+.heading
+  text-align: center
+  top: 20px
+  position: relative
+
+.text-block, .info-block, .about-block
+  position: relative
+
+.text-block
+  top: 35%
+  margin-left: 80px
+  margin-right: 80px
+  vertical-align: middle
+
+  @include respond-to(medium-down)
+    margin: 1em
+    top: 0
+  @include respond-to(medium-up)
+    top: 10%
+    margin-left: 40px
+    margin-right: 40px
+
+.about-block
+  top: 35%
+  margin-left: 80px
+  margin-right: 80px
+  vertical-align: middle
+
+  @include respond-to(handhelds)
+    margin: 0
+  @include respond-to(medium-screens)
+    margin-left: 40px
+    margin-right: 40px
+
+  @include respond-to(retina-down)
+    top: 10%
+
+  @include respond-to(medium-down)
+    position: initial
+    margin-top: 1em
+
+.info-block
+  top: 20%
+  margin-left: 40px
+  margin-right: 40px
+  text-align: center
+  vertical-align: middle
+
+  @include respond-to(medium-up)
+    img
+      width: 50%
+      min-width: 200px
+      transition: all 0.3s ease-in-out
+      &:hover
+        transform: scale(1.03)
+      .block
+        div
+          &:nth-child(2n)
+            margin: 10px 0 10px 0
+
+  @include respond-to(handhelds)
+    top: 5%
+    margin: 0
+
+    li
+      img
+        max-height: 33%
+
+.block
+  margin-top: 10px
+  margin-bottom: 10vh
+  @include respond-to(handhelds)
+    margin: 0
+
+.skill-block
+  margin-top: 15vh
+  @include respond-to(full-hd)
+    margin-top: 30vh
+    .block
+      margin-top: 5vh
+
+  @include respond-to(retina-down)
+    .block
+      margin-top: 0
+    hr
+      margin-top: 0
+
+  @include respond-to(medium-down)
+    margin-top: 2em
+    margin-bottom: 1.5em
+
+.social
+  position: absolute
+  right: 10%
+  @include respond-to(handhelds)
+    right: 0%
+  a
+    color: #292b2c
+
+.expertise
+  img
+    width: 100px
+  @include respond-to(medium-down)
+    & > div
+      width: auto
+    b
+      font-size: 12px
+    img
+      width: 50px
+      margin-left: 10px
+
+//ID Styles
+//Web project Styles
+#projectReferences
+  //@include respond-to(full-hd)
+  //  .info-block
+  //    top: 30%
+
+  @include respond-to(medium-up)
+    img
+      &:hover
+        transform: scale(0.97)
+//@include respond-to(medium-down)
+//  .info-block
+//    top: 0%
+
+//YouTube project Styles
+#a2aYtPreview
+  background: url('https://img.youtube.com/vi/Ey-lCUnDbXY/0.jpg') center no-repeat
+  height: 30vh
+  @include respond-to(medium-up)
+    width: 50vw
+
+#WGIAYtPreview
+  background: url('https://img.youtube.com/vi/eXe7xjYuq2I/0.jpg') center no-repeat
+  height: 30vh
+  @include respond-to(medium-up)
+    width: 50vw
+
+#TOFWYtPreview
+  background: url('https://img.youtube.com/vi/3Hz3WfE22VM/0.jpg') center no-repeat
+  height: 30vh
+  @include respond-to(medium-up)
+    width: 50vw
+
+#audioReferences
+  img
+    height: 30vh
+  @include respond-to(medium-up)
+    img
+      &:hover
+        transform: scale(1.03)
+    .block
+      div
+        &:nth-child(2n)
+          margin: 10px 0 10px 0
+
+//Art project Styles
+#artReferences
+  img
+    width: 100%
+  @include respond-to(medium-up)
+    img
+      &:hover
+        transform: scale(1.03)
+      width: 50%
+
+    .block
+      div
+        &:nth-child(2n)
+          margin: 10px 0 10px 0
+
+//Effects
+.shadow
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(50, 50, 50, 0.15) !important
+  -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15) !important
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15) !important
+
+.innerShadow
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.15) !important
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.15) !important
+  box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.15) !important
+
+//Positioning
+.align-center
+  text-align: center
+  vertical-align: middle
+
+.fit-content
+  overflow: hidden
+  height: auto
+
+//Text
+.text-lighten
+  color: rgba(50, 50, 50, 0.4)
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+
+.list-header
+  font-weight: 700
+  span
+    color: #bebebe
+    font-weight: 300
+
+.bg-primary
+  a
+    color: saturate(lighten($text-primary, 40%), 10%)
+  .list-items
+    color: $text-primary
+    ul
+      color: lighten(desaturate($text-primary, 20%), 10%)
+
+.bg-darken, .bg-secondary
+  a
+    color: #fff
+  .list-items
+    color: $text-secondary
+    ul
+      color: darken(desaturate($text-secondary, 20%), 10%)
+
+.list-items
+  text-align: left
+  span
+    font-weight: 500
+  ul
+    li
+      list-style-type: none
+      text-align: left
+      &:before
+        content: "—"
+
+  .list-item
+    display: inline-grid
+    margin-left: 15px
+    margin-right: 15px
+
+//flags
+.de
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiNkMDAiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2ZmY2UwMCIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4NCg==')
+  width: 100%
+  height: 60%
+  background-size: 100% 100%
+
+.en
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0zMCwxNWgzMHYxNXp2MTVoLTMwemgtMzB2LTE1enYtMTVoMzB6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg2MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw2MCwzMG0wLTMwbC02MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNjAsMzBtMC0zMGwtNjAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjwvc3ZnPg0K')
+  width: 100%
+  height: 60%
+  background-size: 100% 100%
+
+// elements
+#hahnSection
+  img
+    -webkit-transition: none
+    -moz-transition: none
+    -ms-transition: none
+    -o-transition: none
+    transition: none
+
+#language
+  transition: all 0.7s ease-in-out
+  &:hover
+    transform: scale(1.05)
+
+//Loader Animations
+#loader-wrapper
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1000
+  text-align: center
+
+#nojs
+  display: block
+  position: relative
+  top: 50%
+  color: white
+  margin-top: 85px
+
+  @include respond-to(medium-down)
+    margin-left: 100px
+
+#loader
+  display: block
+  position: relative
+  left: 50%
+  top: 50%
+  width: 150px
+  height: 150px
+  margin: -75px 0 0 -75px
+  border-radius: 50%
+  border: 3px solid transparent
+  border-top-color: #3498db
+
+  -webkit-animation: spin 2s linear infinite
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  z-index: 1001
+
+#loader:before
+  content: ""
+  position: absolute
+  top: 5px
+  left: 5px
+  right: 5px
+  bottom: 5px
+  border-radius: 50%
+  border: 3px solid transparent
+  border-top-color: #e74c3c
+
+  -webkit-animation: spin 3s linear infinite
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite
+/* Chrome, Firefox 16+, IE 10+, Opera */
+
+
+#loader:after
+  content: ""
+  position: absolute
+  top: 15px
+  left: 15px
+  right: 15px
+  bottom: 15px
+  border-radius: 50%
+  border: 3px solid transparent
+  border-top-color: #f9c922
+
+  -webkit-animation: spin 1.5s linear infinite
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite
+/* Chrome, Firefox 16+, IE 10+, Opera */
+
+
+@-webkit-keyframes spin
+  0%
+    -webkit-transform: rotate(0deg)
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg)
+    /* IE 9 */
+    transform: rotate(0deg)
+  /* Firefox 16+, IE 10+, Opera */
+
+  100%
+    -webkit-transform: rotate(360deg)
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg)
+    /* IE 9 */
+    transform: rotate(360deg)
+/* Firefox 16+, IE 10+, Opera */
+
+
+@keyframes spin
+  0%
+    -webkit-transform: rotate(0deg)
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg)
+    /* IE 9 */
+    transform: rotate(0deg)
+  /* Firefox 16+, IE 10+, Opera */
+
+  100%
+    -webkit-transform: rotate(360deg)
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg)
+    /* IE 9 */
+    transform: rotate(360deg)
+/* Firefox 16+, IE 10+, Opera */
+
+
+
+#loader-wrapper .loader-section
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100%
+  background: #212121
+  z-index: 1000
+  -webkit-transform: translateX(0)
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0)
+  /* IE 9 */
+  transform: translateX(0)
+/* Firefox 16+, IE 10+, Opera */
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section
+  opacity: 0
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+
+.loaded #loader
+  opacity: 0
+  -webkit-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+
+.loaded #loader-wrapper
+  visibility: hidden
+
+  -webkit-transform: translateY(-100%)
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%)
+  /* IE 9 */
+  transform: translateY(-100%)
+  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out
+  transition: all 0.3s 1s ease-out
+
+//icons
+[data-icon]:before
+  font-family: icons
+  /* BYO icon font, mapped smartly */
+  content: attr(data-icon)
+  speak: none
+/* Not to be trusted, but hey. */
+
+
+//fix mobile size for oneperframe scroll
+.oneperframe
+  @include respond-to(handhelds)
+    height: 20vh !important
+    line-height: 20vh !important
+
+.frame
+  @include respond-to(handhelds)
+    height: 20vh !important
+    line-height: 20vh !important

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "nav_about",
+    "de": "Über",
+    "en": "About"
+  },
+  {
+    "name": "nav_reference",
+    "de": "Referenzen",
+    "en": "References"
+  },
+  {
+    "name": "nav_skills",
+    "de": "Skills",
+    "en": "Skills"
+  },
+  {
+    "name": "nav_contact",
+    "de": "Kontakt",
+    "en": "Contact"
+  }
+]

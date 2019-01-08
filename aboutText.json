@@ -1,0 +1,13 @@
+[
+  {
+    "id": "Storyclash CMS",
+    "de": {
+      "heading": "Über mich",
+      "text": "<p>Geboren in Wien, Österreich.</br> Zur Zeit bin ich Medientechnologie und -design Student in Hagenberg. Um meine Projekte aufrecht zu erhalten bin ich nebenbei Freelancer als Webentwickler. Ebenso habe ich eine Faszination für Musik, weshalb ich ab und an in Musikproduktionen eines Freundes mitwirke. Musik und Programmieren sind aber nicht alles, digitale Kunst ist ebenso ein Teil von mir.</p>"
+    },
+    "en": {
+      "heading": "Who am I",
+      "text": "<p>I was born in 1995, in Vienna[Austria].</br>My coding enthusiasm started in 2009 at the HTL Hollabrunn. The second game changer for me was to decide for the mediatechnology and -design course at the university of applied sciences in Hagenberg.</p><p>I'm partly developing for companies already as a freelancer in my core department: <a href='https://en.wikipedia.org/wiki/Web_development' target='_blank'>web-development</a>. So if you want me to fix or produce some bugs for you, create an issue per mail at the end of the site.</p><p>My passion for music is a never ending story. Thats why every so often i participate in music productions from a friend.</p><p> Creating music and program for the internet is not everything i am interested in: </p><p> Digital Art is also a thing.</p>"
+    }
+  }
+]

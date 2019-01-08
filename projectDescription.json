@@ -1,0 +1,98 @@
+[
+  {
+    "name": "storyclashCMSProject",
+    "title": "Storyclash CMS",
+    "en": {
+      "description": "The content management system of Storyclash was completely rebuilt from scratch.",
+      "shortDescription": "CMS for Storyclash",
+      "date": "since 2016"
+    },
+    "de": {
+      "description": "Das Content Management System von Storyclash wurde von Grun auf komplett erneuert.",
+      "shortDescription": "CMS für Storyclash",
+      "date": "seit 2016"
+    },
+    "link": "//storyclash.com",
+    "linkName": "Storyclash"
+  },
+  {
+    "name": "fitzProject",
+    "title": "F I T Z",
+    "en": {
+      "description": "A bandpage project that i have created for good friends of mine.",
+      "shortDescription": "Website for F I T Z",
+      "date": "since 2017"
+    },
+    "de": {
+      "description": "Eine Bandseite, welche ich für Freunde von mir produziert habe.",
+      "shortDescription": "Webseite für F I T Z",
+      "date": "seit 2017"
+    },
+    "link": "//f-i-t-z.com",
+    "linkName": "FITZ"
+  },
+  {
+    "name": "csiggProject",
+    "title": "CSIGG",
+    "en": {
+      "description": "CheatSheet & Infographic Generator. A web application for uploading/manipulating and printing cheatsheets. Created with the help of a genius coworker.",
+      "shortDescription": "University WebProject",
+      "date": "2016"
+    },
+    "de": {
+      "description": "CheatSheet & Infographic Generator. Eine Webanwendung für das raufladen/manipulieren und ausdrucken von Schummlern. Erstellt mit Hilfe einer genialen Projektpartnerin.",
+      "shortDescription": "FH Web-Projekt",
+      "date": "2016"
+    },
+    "link": null,
+    "linkName": null
+  },
+  {
+    "name": "hahnCMSProject",
+    "title": "Hahn CMS",
+    "en": {
+      "description": "The content management system for Dr. Kurt Hahn GmbH. Created with mongoDB, node and angular 4.",
+      "shortDescription": "CMS for Dr.Kurt Hahn GmbH",
+      "date": "coming 2018"
+    },
+    "de": {
+      "description": "Das Content Management System für die Dr. Kurt Hahn GmbH. Implementiert mit MongoDB, Node und Angular 4.",
+      "shortDescription": "CMS für Dr.Kurt Hahn GmbH",
+      "date": "in 2018"
+    },
+    "link": null,
+    "linkName": null
+  },
+  {
+    "name": "agarioProject",
+    "title": "Agar.io Clone",
+    "en": {
+      "description": "A browser game with web-sockets and node.js.",
+      "shortDescription": "Agar.io browser game clone",
+      "date": "in development"
+    },
+    "de": {
+      "description": "Ein Browser Spiel welches mit Web-Sockets und Node.js realisiert wird.",
+      "shortDescription": "Agar.io Browser Spiel Klon",
+      "date": "in Entwicklung"
+    },
+    "link": null,
+    "linkName": null
+  },
+  {
+    "name": "bachelorProject",
+    "title": "Webcomponent CMS",
+    "en": {
+      "description": "A CMS completely implemented with webcomponents on the client, server and database side for my bachelor thesis project.",
+      "shortDescription": "Webcomponents CMS",
+      "date": "in development"
+    },
+    "de": {
+      "description": "Ein CMS, umgesetzt mit Webkomponenten client-, server- und datenbankseitig für mein Bachelorprojekt.",
+      "shortDescription": "Webkomponenten CMS",
+      "date": "in Entwicklung"
+    },
+    "link": null,
+    "linkName": null
+  }
+]

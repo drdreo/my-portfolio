@@ -1,0 +1,24 @@
+[
+  {
+    "id": "audioVideoText",
+    "de": {
+      "heading": "Audio/Video",
+      "text": "<p>Aus Leidenschaft beteilige ich mich an Musikproduktionen, Musikvideos und beim neuesten Projekt <small>—The Old Fashioned Way—</small> habe ich mich am Audio mischen versucht.</p>"
+    },
+    "en": {
+      "heading": "Audio/Video",
+      "text": "<p>As passion i participate in music productions, music videos and in my most recent project <small>—The Old Fashioned Way—</small> i tried myself at mixing audio.</p>"
+    }
+  },
+  {
+    "id": "digitalArtsText",
+    "de": {
+      "heading": "Digital Art",
+      "text": "<p>Durch ein Hobby kam ich zum digitalem Zeichnen, erstellen von abstrakter Kunst und manchmal auch <a href='./evolution'><u>kreativem programmieren</u></a>.</p>"
+    },
+    "en": {
+      "heading": "Digital Art",
+      "text": "<p>As a hobby i got into digital drawing, creating abstract art and sometimes <a href='./evolution'><u>creative coding.</u></a></p>"
+    }
+  }
+]
